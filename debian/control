@@ -1,0 +1,23 @@
+Source: crow
+Priority: optional
+Maintainer: Jean-Philippe Bruyère <jp_bruyere@hotmail.com>
+Build-Depends: cli-common-dev (>=0.9), debhelper (>=9)
+Build-Depends-Indep: mono-devel (>= 3.2), nuget (>=2.8)
+Standards-Version: 3.9.8
+Section: cli-mono
+Homepage: https://jpbruyere.github.io/Crow/
+#Vcs-Git: git://anonscm.debian.org/collab-maint/crow.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/crow.git
+
+Package: libcrow-dev
+Section: libdevel
+Architecture: all
+Depends: crow (= ${binary:Version}), ${misc:Depends}, ${cli:Depends}
+Description: C# Rapid Open Widget, development files.
+ C# widget toolkit with XAML like interface definition, binding, styling, and templates.
+
+Package: libcrow
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}
+Description: C# Rapid Open Widgets 
+ C# widget toolkit with XAML like interface definition, binding, styling, and templates.

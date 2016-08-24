@@ -1,0 +1,5 @@
+crow (0.4-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Jean-Philippe Bruyère (grand tetras software) <jp_bruyere@hotmail.com>  Wed, 24 Aug 2016 12:38:35 +0200
