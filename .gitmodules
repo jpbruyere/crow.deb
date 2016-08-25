@@ -1,0 +1,3 @@
+[submodule "GGL"]
+	path = GGL
+	url = git://github.com/jpbruyere/GGL.git

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<package >
+	<metadata>
+		<id>Crow.OpenTK</id>
+		<version>0.4.8</version>
+		<title>C# Rapid Open Widget Toolkit</title>
+		<authors>JP Bruyere</authors>
+		<owners>Grand Tetras Software</owners>
+		<licenseUrl>https://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+		<projectUrl>https://jpbruyere.github.io/Crow/</projectUrl>
+		<iconUrl>https://jpbruyere.github.io/Crow/images/crow.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>
+CROW is a pure C# widget toolkit with templates, styles, compositing, and bindings.
+Crow.OpenTK is the OpenTK ready version.
+It runs with Mono FrameWork >= 4.0.
+This package depends on a pre-release OpenTK version, ensure pre-release packages are visible in your nuget client when adding Crow package.
+		</description>
+		<summary>
+CROW is a pure C# widget toolkit with templates, styles, compositing, and bindings.
+Crow.OpenTK is the OpenTK ready version.
+
+For more information, please visit https://jpbruyere.github.io/Crow/.
+		</summary>
+		<releaseNotes>alpha release</releaseNotes>
+		<copyright>Copyright 2016</copyright>
+		<dependencies>
+			<dependency id="OpenTK.Next" version="1.2" />
+		</dependencies>
+        <tags>Crow OpenTK OpenGL Widget Interface GUI C# .Net Mono</tags>
+        <references>
+            <reference file="Crow.dll" />
+        </references>
+        <frameworkAssemblies>
+			<frameworkAssembly assemblyName="System" />
+			<frameworkAssembly assemblyName="System.Drawing" />
+			<frameworkAssembly assemblyName="System.Xml" />
+			<frameworkAssembly assemblyName="gio-sharp" />
+			<frameworkAssembly assemblyName="gdk-sharp" />
+			<frameworkAssembly assemblyName="glib-sharp" />
+			<frameworkAssembly assemblyName="cairo-sharp" />
+		</frameworkAssemblies>
+	</metadata>
+	<files>
+		<file src="Tests/OpenTKGameWindow.cs" target="content" />
+		<file src="Tests/OpenGL/*.cs" target="content/OpenGL" />
+		<file src="build/Release/Crow.dll" target="lib/net45" />
+		<file src="build/Release/Crow.dll.config" target="content" />
+	</files>
+</package>

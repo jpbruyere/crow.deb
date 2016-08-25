@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2980F9B-4798-4C05-99E2-E174810F7C7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Crow</RootNamespace>
+    <AssemblyName>Crow</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>false</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Description>C# Rapid Open Widget</Description>
+    <BaseAddress>4194304</BaseAddress>
+    <ReleaseVersion>0.4</ReleaseVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputPath>$(SolutionDir)build\$(Configuration)</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)build\obj\$(Configuration)</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG_FOCUS0;DEBUG_LAYOUTING0;TRACE;DEBUG;__linux__;MEASURE_TIME;DEBUG_LOAD0;DEBUG_BINDING0;DEBUG_CLIP_RECTANGLE0</DefineConstants>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>True</Optimize>
+    <DebugType>None</DebugType>
+    <DefineConstants>__linux__;MEASURE_TIME</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src\Colors.cs" />
+    <Compile Include="src\Point.cs" />
+    <Compile Include="src\Rectangle.cs" />
+    <Compile Include="src\Rectangles.cs" />
+    <Compile Include="src\Size.cs" />
+    <Compile Include="src\GraphicObjects\GraphicObject.cs" />
+    <Compile Include="src\GraphicObjects\Container.cs" />
+    <Compile Include="src\GraphicObjects\Group.cs" />
+    <Compile Include="src\GraphicObjects\HorizontalStack.cs" />
+    <Compile Include="src\GraphicObjects\Image.cs" />
+    <Compile Include="src\GraphicObjects\Label.cs" />
+    <Compile Include="src\GraphicObjects\TextBox.cs" />
+    <Compile Include="src\GraphicObjects\ProgressBar.cs" />
+    <Compile Include="src\GraphicObjects\VerticalStack.cs" />
+    <Compile Include="src\Cairo\CairoHelpers.cs" />
+    <Compile Include="src\win32\Win32.cs" />
+    <Compile Include="src\win32\winApi.cs" />
+    <Compile Include="src\GraphicObjects\Button.cs" />
+    <Compile Include="src\GraphicObjects\GraduatedSlider.cs" />
+    <Compile Include="src\GraphicObjects\Slider.cs" />
+    <Compile Include="src\GraphicObjects\NumericControl.cs" />
+    <Compile Include="src\GraphicObjects\Scroller.cs" />
+    <Compile Include="src\GraphicObjects\ILayoutable.cs" />
+    <Compile Include="src\Enums.cs" />
+    <Compile Include="src\GraphicObjects\GenericStack.cs" />
+    <Compile Include="src\CompilerServices\CompilerServices.cs" />
+    <Compile Include="src\GraphicObjects\AnalogMeter.cs" />
+    <Compile Include="src\GraphicObjects\Border.cs" />
+    <Compile Include="src\Font.cs" />
+    <Compile Include="src\GraphicObjects\Window.cs" />
+    <Compile Include="src\GraphicObjects\ListBox.cs" />
+    <Compile Include="src\ExtensionsMethods.cs" />
+    <Compile Include="src\Interface.cs" />
+    <Compile Include="src\LayoutingQueueItem.cs" />
+    <Compile Include="src\GraphicObjects\Spinner.cs" />
+    <Compile Include="src\DynAttribute.cs" />
+    <Compile Include="src\GraphicObjects\IValueChange.cs" />
+    <Compile Include="src\Picture.cs" />
+    <Compile Include="src\SvgPicture.cs" />
+    <Compile Include="src\BmpPicture.cs" />
+    <Compile Include="src\GraphicObjects\TemplatedControl.cs" />
+    <Compile Include="src\GraphicObjects\RadioButton.cs" />
+    <Compile Include="src\GraphicObjects\Expandable.cs" />
+    <Compile Include="src\GraphicObjects\PrivateContainer.cs" />
+    <Compile Include="src\GraphicObjects\TemplatedContainer.cs" />
+    <Compile Include="src\GraphicObjects\Popper.cs" />
+    <Compile Include="src\TextChangeEventArgs.cs" />
+    <Compile Include="src\ReflexionExtensions.cs" />
+    <Compile Include="src\XCursor.cs" />
+    <Compile Include="src\GraphicObjects\Grid.cs" />
+    <Compile Include="src\GraphicObjects\TextRun.cs" />
+    <Compile Include="src\GraphicObjects\MessageBox.cs" />
+    <Compile Include="src\SelectionChangeEventArgs.cs" />
+    <Compile Include="src\ValueChangeEventArgs.cs" />
+    <Compile Include="src\GraphicObjects\FileDialog.cs" />
+    <Compile Include="src\GraphicObjects\CheckBox.cs" />
+    <Compile Include="src\GraphicObjects\ComboBox.cs" />
+    <Compile Include="src\GraphicObjects\GroupBox.cs" />
+    <Compile Include="src\GraphicObjects\ScrollBar.cs" />
+    <Compile Include="src\BubblingMouseButtonEventArgs.cs" />
+    <Compile Include="src\SolidColor.cs" />
+    <Compile Include="src\Gradient.cs" />
+    <Compile Include="src\Fill\Fill.cs" />
+    <Compile Include="src\LayoutingEventArgs.cs" />
+    <Compile Include="src\ScrollingEventArgs.cs" />
+    <Compile Include="src\GraphicObjects\Trend.cs" />
+    <Compile Include="src\GraphicObjects\Splitter.cs" />
+    <Compile Include="src\GraphicObjects\TreeView.cs" />
+    <Compile Include="src\GraphicObjects\TabView.cs" />
+    <Compile Include="src\GraphicObjects\TabItem.cs" />
+    <Compile Include="src\GraphicObjects\DummyTemplate.cs" />
+    <Compile Include="src\Input\KeyboardKeyEventArgs.cs" />
+    <Compile Include="src\Input\Buttons.cs" />
+    <Compile Include="src\Input\ButtonState.cs" />
+    <Compile Include="src\Input\Key.cs" />
+    <Compile Include="src\Input\KeyboardState.cs" />
+    <Compile Include="src\Input\KeyModifiers.cs" />
+    <Compile Include="src\Input\MouseButton.cs" />
+    <Compile Include="src\Input\MouseEventArgs.cs" />
+    <Compile Include="src\Input\MouseScroll.cs" />
+    <Compile Include="src\Input\MouseState.cs" />
+    <Compile Include="src\rsvg\DimensionData.cs" />
+    <Compile Include="src\rsvg\Global.cs" />
+    <Compile Include="src\rsvg\Handle.cs" />
+    <Compile Include="src\rsvg\Pixbuf.cs" />
+    <Compile Include="src\rsvg\RsvgSharp.SizeFuncNative.cs" />
+    <Compile Include="src\rsvg\SizeFunc.cs" />
+    <Compile Include="src\MouseCursorChangedEventArgs.cs" />
+    <Compile Include="src\GraphicObjects\IBindable.cs" />
+    <Compile Include="src\Input\KeyPressEventArgs.cs" />
+    <Compile Include="src\Configuration.cs" />
+    <Compile Include="src\Measure.cs" />
+    <Compile Include="src\CompilerServices\MemberReference.cs" />
+    <Compile Include="src\CompilerServices\Bindings.cs" />
+    <Compile Include="src\StyleReader.cs" />
+    <Compile Include="src\GraphicObjects\DirectoryView.cs" />
+    <Compile Include="src\Instantiator.cs" />
+    <Compile Include="src\IMLReader.cs" />
+    <Compile Include="src\ItemTemplate.cs" />
+    <Compile Include="src\Style.cs" />
+    <Compile Include="src\GraphicObjects\Wrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+	<Reference Include="cairo-sharp"/>
+	<Reference Include="gdk-sharp"/>
+	<Reference Include="gio-sharp"/>
+	<Reference Include="glib-sharp"/>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="src\GraphicObjects\" />
+    <Folder Include="src\Cairo\" />
+    <Folder Include="src\win32\" />
+    <Folder Include="Images\" />
+    <Folder Include="Images\Icons\" />
+    <Folder Include="src\CompilerServices\" />
+    <Folder Include="src\Fill\" />
+    <Folder Include="src\Input\" />
+    <Folder Include="src\rsvg\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Icons\updown.svg" />
+    <EmbeddedResource Include="Images\Icons\IconAlerte.svg" />
+    <EmbeddedResource Include="Images\Icons\buttonB.svg" />
+    <EmbeddedResource Include="Images\Icons\checkbox.svg" />
+    <EmbeddedResource Include="Images\Icons\radiobutton.svg" />
+    <EmbeddedResource Include="Templates\Spinner %28copier%29.goml" />
+    <EmbeddedResource Include="Templates\ItemTemplate.goml" />
+    <EmbeddedResource Include="Images\Icons\expandable.svg" />
+    <EmbeddedResource Include="Templates\Checkbox2.goml" />
+    <EmbeddedResource Include="Images\Icons\tetra.png" />
+    <EmbeddedResource Include="Images\Icons\exit.svg" />
+    <EmbeddedResource Include="Templates\AnalogMeter0.goml" />
+    <EmbeddedResource Include="Images\meter.svg" />
+    <EmbeddedResource Include="Images\Icons\member.svg" />
+    <EmbeddedResource Include="Images\Icons\exit2.svg" />
+    <EmbeddedResource Include="Images\button.svg" />
+    <EmbeddedResource Include="Images\Icons\iconInfo.svg" />
+    <EmbeddedResource Include="Templates\tmpDirItem.goml" />
+    <EmbeddedResource Include="Templates\ScrollingListBox.goml" />
+    <EmbeddedResource Include="Templates\imgItemTemplate.goml" />
+    <EmbeddedResource Include="Images\Icons\Cursors\cross" />
+    <EmbeddedResource Include="Images\Icons\Cursors\bottom_left_corner" />
+    <EmbeddedResource Include="Images\Icons\Cursors\bottom_right_corner" />
+    <EmbeddedResource Include="Images\Icons\Cursors\top_left_corner" />
+    <EmbeddedResource Include="Images\Icons\Cursors\top_right_corner" />
+    <EmbeddedResource Include="Images\Icons\Cursors\arrow" />
+    <EmbeddedResource Include="Images\Icons\Cursors\sb_h_double_arrow" />
+    <EmbeddedResource Include="Images\Icons\Cursors\sb_v_double_arrow" />
+    <EmbeddedResource Include="Images\Icons\Cursors\hand" />
+    <EmbeddedResource Include="Images\Icons\Cursors\help" />
+    <EmbeddedResource Include="Images\Icons\Cursors\move" />
+    <EmbeddedResource Include="Templates\ArrowButTemplate.crow" />
+    <EmbeddedResource Include="Images\crow0.svg" />
+    <EmbeddedResource Include="Templates\Dummy.goml" />
+    <EmbeddedResource Include="Images\Icons\crow.png" />
+    <EmbeddedResource Include="Images\Icons\crow.svg" />
+    <EmbeddedResource Include="Default.style" />
+    <EmbeddedResource Include="Images\Icons\folder.svg" />
+    <EmbeddedResource Include="Images\Icons\file.svg" />
+    <EmbeddedResource Include="Templates\Button.template">
+      <LogicalName>Crow.Button.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\CheckBox.template">
+      <LogicalName>Crow.CheckBox.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\ComboBox.template">
+      <LogicalName>Crow.ComboBox.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Expandable.template">
+      <LogicalName>Crow.Expandable.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\DirectoryView.template">
+      <LogicalName>Crow.DirectoryView.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\FileDialog.template">
+      <LogicalName>Crow.FileDialog.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\GroupBox.template">
+      <LogicalName>Crow.GroupBox.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\ListBox.template">
+      <LogicalName>Crow.ListBox.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\MessageBox.template">
+      <LogicalName>Crow.MessageBox.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Popper.template">
+      <LogicalName>Crow.Popper.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\RadioButton.template">
+      <LogicalName>Crow.RadioButton.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\ScrollBar.template">
+      <LogicalName>Crow.ScrollBar.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Slider.template">
+      <LogicalName>Crow.Slider.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Spinner.template">
+      <LogicalName>Crow.Spinner.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\TabItem.template">
+      <LogicalName>Crow.TabItem.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\TreeView.template">
+      <LogicalName>Crow.TreeView.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Window.template">
+      <LogicalName>Crow.Window.template</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Icons\Cursors\ibeam" />
+    <EmbeddedResource Include="Templates\treeList.crow" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="Crow.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
